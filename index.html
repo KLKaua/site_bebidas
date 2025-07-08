@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Drinks - Bebidas Selecionadas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>Premium Drinks</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#catalog">Catálogo</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="hero-title">Bebidas Premium</h2>
+                <p class="hero-subtitle">Descubra nossa seleção exclusiva de bebidas alcoólicas de alta qualidade</p>
+                <button class="cta-button" onclick="scrollToSection('catalog')">Ver Catálogo</button>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Bebidas Premium">
+            </div>
+        </section>
+
+        <section id="catalog" class="catalog">
+            <div class="container">
+                <h2 class="section-title">Nosso Catálogo</h2>
+                
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="whisky">Whisky</button>
+                    <button class="filter-btn" data-filter="vinho">Vinhos</button>
+                    <button class="filter-btn" data-filter="cerveja">Cervejas</button>
+                    <button class="filter-btn" data-filter="vodka">Vodka</button>
+                    <button class="filter-btn" data-filter="licor">Licores</button>
+                </div>
+
+                <div class="drinks-grid" id="drinksGrid">
+                    <!-- Whiskys -->
+                    <div class="drink-card" data-category="whisky">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/5947047/pexels-photo-5947047.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Whisky Premium">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Whisky Premium</h3>
+                            <p>Whisky envelhecido 12 anos</p>
+                            <span class="price">R$ 180,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <div class="drink-card" data-category="whisky">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/2647933/pexels-photo-2647933.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Whisky Single Malt">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Single Malt</h3>
+                            <p>Whisky escocês single malt</p>
+                            <span class="price">R$ 320,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <!-- Vinhos -->
+                    <div class="drink-card" data-category="vinho">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/1407846/pexels-photo-1407846.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vinho Tinto">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Vinho Tinto Premium</h3>
+                            <p>Cabernet Sauvignon</p>
+                            <span class="price">R$ 120,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <div class="drink-card" data-category="vinho">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/1407847/pexels-photo-1407847.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vinho Branco">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Vinho Branco</h3>
+                            <p>Chardonnay selecionado</p>
+                            <span class="price">R$ 95,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <!-- Cervejas -->
+                    <div class="drink-card" data-category="cerveja">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cerveja Artesanal">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Cerveja Artesanal IPA</h3>
+                            <p>India Pale Ale premium</p>
+                            <span class="price">R$ 15,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <div class="drink-card" data-category="cerveja">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/1552630/pexels-photo-1552630.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Cerveja Pilsen">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Cerveja Pilsen</h3>
+                            <p>Cerveja lager premium</p>
+                            <span class="price">R$ 8,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <!-- Vodkas -->
+                    <div class="drink-card" data-category="vodka">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/5947892/pexels-photo-5947892.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Vodka Premium">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Vodka Premium</h3>
+                            <p>Vodka destilada 5 vezes</p>
+                            <span class="price">R$ 85,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+
+                    <!-- Licores -->
+                    <div class="drink-card" data-category="licor">
+                        <div class="drink-image">
+                            <img src="https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Licor de Frutas">
+                        </div>
+                        <div class="drink-info">
+                            <h3>Licor de Frutas</h3>
+                            <p>Licor artesanal de frutas</p>
+                            <span class="price">R$ 45,00</span>
+                            <button class="order-btn">Encomendar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2>Sobre Nós</h2>
+                        <p>Com mais de 10 anos de experiência no mercado, oferecemos uma seleção cuidadosa das melhores bebidas alcoólicas do mundo. Nossa missão é proporcionar experiências únicas através de produtos premium e atendimento personalizado.</p>
+                        <ul class="features">
+                            <li>✓ Produtos importados e nacionais</li>
+                            <li>✓ Entrega rápida e segura</li>
+                            <li>✓ Atendimento especializado</li>
+                            <li>✓ Preços competitivos</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Sobre Premium Drinks">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Entre em Contato</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Informações de Contato</h3>
+                        <div class="contact-item">
+                            <strong>Telefone:</strong> (11) 9999-9999
+                        </div>
+                        <div class="contact-item">
+                            <strong>WhatsApp:</strong> (11) 9999-9999
+                        </div>
+                        <div class="contact-item">
+                            <strong>Email:</strong> contato@premiumdrinks.com
+                        </div>
+                        <div class="contact-item">
+                            <strong>Horário:</strong> Seg-Sáb: 8h-20h
+                        </div>
+                    </div>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <input type="text" placeholder="Seu nome" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Seu email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" placeholder="Seu telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Sua mensagem" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Premium Drinks. Todos os direitos reservados.</p>
+            <p class="disclaimer">Consumo de bebidas alcoólicas é proibido para menores de 18 anos.</p>
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
